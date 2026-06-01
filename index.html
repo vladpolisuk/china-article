@@ -1,0 +1,2015 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Воинская обязанность — полный разбор</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap"
+			rel="stylesheet" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--bg: #f9f7f4;
+				--white: #ffffff;
+				--text: #1a1a1a;
+				--text-sec: #555555;
+				--text-light: #888888;
+				--border: #e0dbd4;
+				--border-light: #ede9e3;
+				--accent: #1a4d8f;
+				--accent-light: #e8eff9;
+				--accent-light-2: #f3f8ff;
+				--accent-mid: #c5d7f0;
+				--red: #c0392b;
+				--red-light: #fdf0ee;
+				--red-light-2: #fff7f6;
+				--red-mid: #f5c6c1;
+				--orange: #c96a1a;
+				--orange-light: #fdf4ec;
+				--green: #1e7a4a;
+				--green-light: #edf7f1;
+				--yellow: #7a6200;
+				--yellow-light: #fffbeb;
+				--yellow-mid: #fde68a;
+				--serif: 'Libre Baskerville', Georgia, serif;
+				--sans: 'Source Sans 3', system-ui, sans-serif;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				background: var(--bg);
+				color: var(--text);
+				font-family: var(--sans);
+				font-size: 16px;
+				line-height: 1.7;
+			}
+
+			/* ─── LAYOUT ─── */
+			.page-wrap {
+				max-width: 740px;
+				margin: 0 auto;
+				padding: 0 24px 80px;
+			}
+
+			/* ─── HEADER ─── */
+			header {
+				padding: 48px 0 32px;
+			}
+			.header-eyebrow {
+				font-family: var(--sans);
+				font-size: 13px;
+				font-weight: 600;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: var(--accent);
+				margin-bottom: 14px;
+			}
+			h1 {
+				font-family: var(--serif);
+				font-size: clamp(30px, 5vw, 40px);
+				font-weight: 700;
+				line-height: 1.15;
+				color: var(--text);
+				margin-bottom: 16px;
+			}
+			.header-lead {
+				font-size: 17px;
+				color: var(--text-sec);
+				max-width: 580px;
+				line-height: 1.6;
+				margin-bottom: 20px;
+			}
+			.header-meta {
+				display: flex;
+				gap: 20px;
+				font-size: 14px;
+				color: var(--text-light);
+				border-top: 1px solid var(--border);
+				padding-top: 14px;
+			}
+			.faq-title {
+				margin-top: 80px;
+			}
+
+			/* ─── TOC ─── */
+			.toc {
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-left: 3px solid var(--accent);
+				padding: 22px 24px;
+				margin-bottom: 52px;
+				border-radius: 0 4px 4px 0;
+			}
+			.toc-label {
+				font-size: 13px;
+				font-weight: 600;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: var(--text-light);
+				margin-bottom: 12px;
+			}
+			.toc ol {
+				padding-left: 18px;
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+			}
+			.toc li {
+				font-size: 15px;
+			}
+			.toc a {
+				color: var(--accent);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				transition: border-color 0.15s;
+			}
+			.toc a:hover {
+				border-color: var(--accent);
+			}
+
+			/* ─── SECTION ─── */
+			.section {
+				margin-bottom: 80px;
+			}
+			.section + .section {
+				padding-top: 8px;
+			}
+
+			h2 {
+				font-family: var(--serif);
+				font-size: 24px;
+				font-weight: 700;
+				color: var(--text);
+				margin-bottom: 6px;
+				line-height: 1.25;
+			}
+			.section-num {
+				font-size: 12px;
+				font-weight: 600;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: var(--text-light);
+				margin-bottom: 6px;
+			}
+			.section-rule {
+				height: 1px;
+				margin: 15px 0 5px;
+			}
+
+			h3 {
+				font-family: var(--sans);
+				font-size: 18px;
+				font-weight: 600;
+				color: var(--text);
+				margin: 24px 0 10px;
+			}
+
+			p {
+				margin-bottom: 14px;
+				color: var(--text-sec);
+				font-size: 16px;
+			}
+			p strong {
+				color: var(--text);
+			}
+			p:last-child {
+				margin-bottom: 0;
+			}
+
+			/* ─── LAW QUOTE ─── */
+			.law-quote {
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-left: 3px solid var(--accent);
+				padding: 14px 18px;
+				margin: 16px 0;
+				border-radius: 0 4px 4px 0;
+			}
+			.law-quote p {
+				font-family: var(--serif);
+				font-size: 15px;
+				font-style: italic;
+				color: var(--text);
+				margin-bottom: 6px;
+				line-height: 1.6;
+			}
+			.law-quote cite {
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 600;
+				letter-spacing: 0.08em;
+				color: var(--accent);
+				text-transform: uppercase;
+			}
+			.law-quote ul {
+				margin: 8px 0 0 28px;
+				font-family: var(--serif);
+				font-size: 15px;
+				font-style: italic;
+				color: var(--text);
+				margin-bottom: 6px;
+				line-height: 1.6;
+			}
+			.law-quote-title {
+				font-family: var(--sans);
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--accent);
+				margin-bottom: 8px;
+			}
+
+			/* ─── FACT TAG ─── */
+			.fact-tag {
+				display: inline-block;
+				font-size: 13px;
+				font-weight: 600;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--accent);
+				background: var(--accent-light);
+				border: 1px solid var(--accent-mid);
+				padding: 3px 10px;
+				border-radius: 3px;
+				margin-bottom: 8px;
+				vertical-align: middle;
+			}
+
+			/* ─── PLAIN LIST ─── */
+			ul.plain,
+			ol.plain {
+				margin: 12px 0 16px;
+				padding-left: 0;
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+			}
+			ul.plain li {
+				font-size: 16px;
+				color: var(--text-sec);
+				padding-left: 18px;
+				position: relative;
+			}
+			ul.plain li::before {
+				content: '—';
+				position: absolute;
+				left: 0;
+				color: var(--border);
+				font-weight: 700;
+			}
+			ol.plain {
+				counter-reset: n;
+			}
+			ol.plain li {
+				font-size: 16px;
+				color: var(--text-sec);
+				padding-left: 24px;
+				position: relative;
+				counter-increment: n;
+			}
+			ol.plain li::before {
+				content: counter(n) '.';
+				position: absolute;
+				left: 0;
+				font-weight: 600;
+				color: var(--accent);
+				font-size: 14px;
+			}
+
+			/* ─── CALLOUT ─── */
+			.callout {
+				display: flex;
+				gap: 12px;
+				padding: 14px 16px;
+				border-radius: 4px;
+				margin: 16px 0;
+				font-size: 15px;
+				line-height: 1.55;
+				border: 1px solid;
+			}
+			.callout-icon {
+				flex-shrink: 0;
+				font-size: 16px;
+				margin-top: 1px;
+			}
+			.callout-body {
+				flex: 1;
+			}
+			.callout-body strong {
+				font-weight: 600;
+			}
+			.callout.info {
+				background: var(--accent-light);
+				border-color: var(--accent-mid);
+				color: #1a3a6e;
+			}
+			.callout.warn {
+				background: var(--yellow-light);
+				border-color: var(--yellow-mid);
+				color: var(--yellow);
+			}
+			.callout.danger {
+				background: var(--red-light);
+				border-color: var(--red-mid);
+				color: var(--red);
+			}
+			.callout.success {
+				background: var(--green-light);
+				border-color: #a7d9be;
+				color: var(--green);
+			}
+
+			/* ─── STEP FLOW ─── */
+			.steps {
+				margin: 20px 0;
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+			}
+			.step {
+				display: flex;
+				gap: 16px;
+				align-items: flex-start;
+				position: relative;
+				padding-bottom: 20px;
+			}
+			.step-image {
+				border-radius: 4px;
+				max-width: 100%;
+				padding: 0 150px;
+				height: auto;
+				flex-shrink: 0;
+			}
+			.step:last-child {
+				padding-bottom: 0;
+			}
+			.step-left {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.step-circle {
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				background: var(--accent);
+				color: #fff;
+				font-size: 13px;
+				font-weight: 700;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+				font-family: var(--sans);
+			}
+			.step-line {
+				width: 1px;
+				flex: 1;
+				background: var(--border);
+				min-height: 16px;
+				margin-top: 4px;
+			}
+			.step:last-child .step-line {
+				display: none;
+			}
+			.step-content {
+				padding-top: 1px;
+				flex: 1;
+			}
+			.step-title {
+				font-size: 15px;
+				font-weight: 600;
+				color: var(--text);
+				margin-bottom: 3px;
+			}
+			.step-desc {
+				font-size: 14px;
+				color: var(--text-sec);
+				line-height: 1.5;
+			}
+
+			/* ─── LOGIC CHAIN ─── */
+			.chain {
+				margin: 20px 0;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				border-radius: 4px;
+			}
+			.chain-item {
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				gap: 12px;
+				padding: 12px 16px;
+				border-radius: 5px;
+				border: 1px solid var(--border-light);
+				background: var(--white);
+				font-size: 15px;
+				color: var(--text-sec);
+			}
+			.chain-item .dot {
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: var(--accent);
+				flex-shrink: 0;
+				margin-top: 6px;
+			}
+			.chain-item .chain-item-num {
+				font-size: 16px;
+				font-weight: 600;
+				color: var(--accent);
+				flex-shrink: 0;
+			}
+			.chain-item .chain-item-desc {
+				margin-top: 1px;
+			}
+			.chain-item .law-ref {
+				margin-left: auto;
+				font-size: 12px;
+				font-weight: 600;
+				color: var(--accent);
+				white-space: nowrap;
+				padding-left: 12px;
+				flex-shrink: 0;
+			}
+			.chain-item strong {
+				color: var(--text);
+			}
+			.chain-arrow {
+				text-align: center;
+				color: var(--text-light);
+				font-size: 17px;
+				background: var(--bg);
+				height: 17px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/* ─── PENALTY TABLE ─── */
+			.penalty-table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 20px 0;
+				font-size: 15px;
+			}
+			.penalty-table th {
+				text-align: left;
+				font-size: 12px;
+				font-weight: 600;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--text-light);
+				padding: 8px 12px;
+				border-bottom: 2px solid var(--border);
+				background: var(--bg);
+			}
+			.penalty-table td {
+				padding: 12px 12px;
+				border-bottom: 1px solid var(--border-light);
+				vertical-align: top;
+				color: var(--text-sec);
+			}
+			.penalty-table tr:last-child td {
+				border-bottom: none;
+			}
+			.penalty-table td:first-child {
+				font-weight: 600;
+				color: var(--text);
+			}
+			.penalty-table .amount {
+				font-weight: 700;
+				color: var(--red);
+				font-size: 16px;
+			}
+			.penalty-table tbody tr:hover td {
+				background: var(--bg);
+			}
+
+			/* ─── WAYS CARDS ─── */
+			.ways {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				margin: 20px 0;
+			}
+			.way-card {
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-radius: 4px;
+				padding: 16px 18px;
+				display: flex;
+				gap: 16px;
+				align-items: flex-start;
+			}
+			.way-card.best {
+				border-color: var(--accent);
+				background: var(--accent-light-2);
+			}
+			.way-n {
+				font-family: var(--serif);
+				font-size: 28px;
+				font-weight: 700;
+				color: var(--border);
+				line-height: 1;
+				flex-shrink: 0;
+				min-width: 32px;
+				margin-top: 2px;
+			}
+			.way-card.best .way-n {
+				color: var(--accent-mid);
+			}
+			.way-title {
+				font-weight: 600;
+				font-size: 16px;
+				color: var(--text);
+				margin-bottom: 3px;
+			}
+			.way-desc {
+				font-size: 14px;
+				color: var(--text-sec);
+				line-height: 1.5;
+			}
+			.way-card.best .way-title {
+				color: var(--accent);
+			}
+			.badge {
+				display: inline-block;
+				margin-top: 8px;
+				font-size: 12px;
+				font-weight: 600;
+				padding: 2px 9px;
+				border-radius: 3px;
+				letter-spacing: 0.06em;
+			}
+			.badge-no {
+				background: var(--red-light);
+				color: var(--red);
+				border: 1px solid var(--red-mid);
+			}
+			.badge-part {
+				background: var(--yellow-light);
+				color: var(--yellow);
+				border: 1px solid var(--yellow-mid);
+			}
+			.badge-yes {
+				background: var(--green-light);
+				color: var(--green);
+				border: 1px solid #a7d9be;
+			}
+
+			/* ─── LAW TABLE ─── */
+			.law-table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 20px 0;
+				font-size: 15px;
+			}
+			.law-table td {
+				padding: 12px 0;
+				border-bottom: 1px solid var(--border-light);
+				vertical-align: top;
+				color: var(--text-sec);
+				line-height: 1.5;
+			}
+			.law-table tr:last-child td {
+				border-bottom: none;
+			}
+			.law-table td:first-child {
+				font-size: 15px;
+				font-weight: 700;
+				color: var(--accent);
+				letter-spacing: 0.05em;
+				white-space: nowrap;
+				padding-right: 16px;
+				width: 1%;
+			}
+			.law-table tbody tr:nth-child(even) td {
+				background: var(--bg);
+			}
+
+			/* ─── VERDICT ─── */
+			.verdict {
+				background: var(--green-light);
+				border: 1px solid #a7d9be;
+				border-radius: 4px;
+				padding: 22px 24px;
+				margin: 28px 0;
+			}
+			.bad-verdict {
+				background: var(--red-light-2);
+				border: 1px solid #f8c6c6;
+				border-radius: 4px;
+				padding: 18px 24px;
+				margin: 18px 0;
+			}
+			.verdict h3 {
+				font-family: var(--serif);
+				font-size: 18px;
+				color: var(--green);
+				margin: 0 0 14px;
+			}
+			.verdict p {
+				font-size: 16px;
+				color: #1a5a38;
+				margin: 0 0 14px;
+			}
+			.verdict ul {
+				list-style: none;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+			.verdict li {
+				display: flex;
+				gap: 10px;
+				font-size: 15px;
+				color: #1a5a38;
+			}
+			.verdict li::before {
+				content: '✓';
+				font-weight: 700;
+				color: var(--green);
+				flex-shrink: 0;
+			}
+			.bad-verdict p {
+				font-size: 16px;
+				color: #5a1a1a;
+				margin: 0 0 8px;
+			}
+			.bad-verdict ul {
+				list-style: none;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+			.bad-verdict li {
+				display: flex;
+				gap: 10px;
+				font-size: 15px;
+				color: #5a1a1a;
+			}
+
+			/* ─── DOCS GRID ─── */
+			.docs-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 10px;
+				margin: 16px 0;
+			}
+			@media (max-width: 500px) {
+				.docs-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+			.doc-item {
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-radius: 4px;
+				padding: 12px 14px;
+				font-size: 14px;
+				color: var(--text-sec);
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			.doc-icon {
+				font-size: 16px;
+			}
+
+			/* ─── FAQ ─── */
+			.faq {
+				margin: 16px 0;
+				display: flex;
+				flex-direction: column;
+			}
+			.faq-item {
+				border-bottom: 1px solid var(--border-light);
+				padding: 14px 0;
+			}
+			.faq-item:first-child {
+				border-top: 1px solid var(--border-light);
+			}
+			.faq-q {
+				font-size: 16px;
+				font-weight: 600;
+				color: var(--text);
+				margin-bottom: 5px;
+			}
+			.faq-a {
+				font-size: 14px;
+				color: var(--text-sec);
+				line-height: 1.55;
+			}
+
+			/* ─── CTA ─── */
+			.cta {
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-top: 3px solid var(--accent);
+				border-radius: 0 0 4px 4px;
+				padding: 28px 28px;
+				text-align: center;
+				margin-top: 52px;
+			}
+			.cta h2 {
+				font-family: var(--serif);
+				font-size: 20px;
+				color: var(--text);
+				margin-bottom: 8px;
+			}
+			.cta p {
+				font-size: 15px;
+				color: var(--text-sec);
+				max-width: 420px;
+				margin: 0 auto 16px;
+			}
+			.cta-btn {
+				display: inline-block;
+				background: var(--accent);
+				color: #fff;
+				font-size: 15px;
+				font-weight: 600;
+				padding: 10px 24px;
+				border-radius: 4px;
+				text-decoration: none;
+				letter-spacing: 0.03em;
+			}
+			.cta-btn:hover {
+				background: #153e72;
+			}
+
+			/* ─── DIVIDER ─── */
+			hr.section-hr {
+				border: none;
+				border-top: 1px solid var(--border);
+				margin: 52px 0;
+			}
+
+			/* ─── INLINE EMPHASIS ─── */
+			mark {
+				background: var(--yellow-mid);
+				color: var(--text);
+				padding: 1px 4px;
+				border-radius: 2px;
+			}
+
+			@media (max-width: 600px) {
+				body {
+					font-size: 16px;
+				}
+				h1 {
+					font-size: 26px;
+				}
+				h2 {
+					font-size: 22px;
+				}
+				.page-wrap {
+					padding: 0 16px 60px;
+				}
+				.faq-title {
+					margin-top: 50px;
+				}
+
+				.step-image {
+					padding: 0 10px;
+				}
+			}
+
+			/* ─── LAW DROPDOWN ─── */
+			.law-dropdown {
+				margin-top: 14px;
+			}
+
+			.law-dropdown-btn {
+				background: none;
+				border: none;
+				color: var(--accent);
+				font-family: var(--sans);
+				font-size: 13px;
+				font-weight: 600;
+				letter-spacing: 0.06em;
+				border-radius: 4px;
+				cursor: pointer;
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				transition: background 0.15s;
+				cursor: pointer;
+				-webkit-tap-highlight-color: transparent;
+				touch-action: manipulation;
+			}
+
+			.law-dropdown-btn .law-dropdown-text {
+				text-transform: uppercase;
+				text-decoration: underline;
+				text-decoration-thickness: 1px;
+				text-underline-offset: 3px;
+			}
+
+			.law-dropdown-btn .arrow {
+				margin-left: 4px;
+				transition: transform 0.2s;
+			}
+
+			.law-dropdown-btn.active .arrow {
+				transform: rotate(180deg);
+			}
+
+			.law-dropdown-content {
+				display: none;
+				margin-top: 10px;
+				padding: 16px;
+				background: var(--white);
+				border: 1px solid var(--border);
+				border-radius: 4px;
+			}
+
+			.law-dropdown-content.open {
+				display: block;
+				animation: dropdownFade 0.2s ease;
+			}
+
+			.law-dropdown-content img {
+				width: 100%;
+				height: auto;
+				border-radius: 3px;
+				margin-bottom: 12px;
+			}
+
+			.law-dropdown-content a {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				color: var(--accent);
+				font-size: 14px;
+				font-weight: 600;
+				text-decoration: none;
+				border-bottom: 1px solid var(--accent-mid);
+				padding-bottom: 1px;
+			}
+
+			.law-dropdown-content a:hover {
+				border-bottom-color: var(--accent);
+			}
+
+			@keyframes dropdownFade {
+				from {
+					opacity: 0;
+					transform: translateY(-4px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page-wrap">
+			<!-- HEADER -->
+			<header>
+				<div class="header-eyebrow">Правовой разбор</div>
+				<h1>Воинская обязанность:<br />откуда берётся и как от неё освободиться</h1>
+				<p class="header-lead">
+					Простое объяснение того, как устроена система: что написано в законах, что за
+					чем следует, и какие есть реальные способы выйти из неё.
+				</p>
+				<div class="header-meta">
+					<span>Автор: Глеб Громов</span>
+					<span>Источники: Конституция РФ · ФЗ-53 · ФЗ-31 · КоАП · УК РФ</span>
+				</div>
+			</header>
+
+			<!-- TOC -->
+			<nav class="toc">
+				<div class="toc-label">Содержание</div>
+				<ol>
+					<li><a href="#s1">Откуда вообще берётся воинская обязанность</a></li>
+					<li><a href="#s2">Что входит в воинскую обязанность</a></li>
+					<li><a href="#s3">Шаг 1: Воинский учёт в 17 лет</a></li>
+					<li><a href="#s4">Шаг 2: Призыв — что происходит в 18 лет</a></li>
+					<li><a href="#s5">Что будет, если не являться</a></li>
+					<li><a href="#s6">Три способа не попасть в армию</a></li>
+					<li><a href="#s7">Способ 2: Категория «В» — почему не спасает</a></li>
+					<li><a href="#s8">Способ 3: Снятие с учёта — как это работает</a></li>
+					<li><a href="#s9">Правовая цепочка шаг за шагом</a></li>
+					<li><a href="#s10">Какие нужны документы и как всё оформить</a></li>
+				</ol>
+			</nav>
+
+			<!-- ═══════════════════════════════════════════════════ -->
+			<!-- SECTION 1 -->
+			<section
+				class="section"
+				id="s1">
+				<div class="section-num">Раздел 1</div>
+				<h2>Откуда вообще берётся воинская обязанность</h2>
+				<div class="section-rule"></div>
+
+				<p>
+					Все обязанности граждан в России — из законов. Все законы строятся на
+					Конституции. Поэтому начнём с неё.
+				</p>
+
+				<div class="law-quote">
+					<p>
+						«Защита Отечества является долгом и обязанностью гражданина Российской
+						Федерации. Гражданин Российской Федерации несёт военную службу в
+						соответствии с федеральным законом.»
+					</p>
+					<cite></cite>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span class="law-dropdown-text">Конституция РФ, Статья 59</span>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img3.teletype.in/files/26/5f/265fc9a6-299e-4ceb-b97b-38b44cc94fb7.png"
+								alt="Скриншот статьи 59 Конституции РФ" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_28399/5004a75d54e54d5824c87ac2b96954f252610504/"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					Конкретный порядок прописан в
+					<strong>Федеральном Законе №53 «О воинской обязанности и военной службе»</strong
+					>. Именно он определяет, кто, когда и как выполняет эту обязанность. Все статьи
+					далее — из него.
+				</p>
+			</section>
+
+			<!-- SECTION 2 -->
+			<section
+				class="section"
+				id="s2">
+				<div class="section-num">Раздел 2</div>
+				<h2>Что входит в воинскую обязанность</h2>
+				<div class="section-rule"></div>
+
+				<p>
+					Важно понять с самого начала:
+					<strong>воинская обязанность — это не просто «служба в армии»</strong>. Это
+					целая система, состоящая из нескольких разных обязанностей.
+				</p>
+
+				<p class="law-quote-title">Воинская обязанность</p>
+
+				<div class="law-quote">
+					<div>
+						<p>«Воинская обязанность граждан Российской Федерации предусматривает:</p>
+						<ul>
+							<li>воинский учёт</li>
+							<li>
+								обязательную подготовку к военной службе; призыв на военную службу
+							</li>
+							<li>прохождение военной службы по призыву; пребывание в запасе</li>
+							<li>
+								призыв на военные сборы и прохождение военных сборов в период
+								пребывания в запасе
+							</li>
+						</ul>
+					</div>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span class="law-dropdown-text">ФЗ-53, Статья 1, Пункт 1</span>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img1.teletype.in/files/00/2a/002a431e-3c50-4246-9cbc-4aa2afb39623.png"
+								alt="Скриншот статьи 1 ФЗ-53" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_18260/87b488de023c2a21da6dbfdc67e4fa5b1c51ddd9"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					Разберём по порядку: как человек попадает в эту систему, что от него требуется
+					на каждом шаге — и где в этой цепочке есть выходы.
+				</p>
+			</section>
+
+			<!-- SECTION 3 -->
+			<section
+				class="section"
+				id="s3">
+				<div class="section-num">Раздел 3</div>
+				<h2>Шаг 1: Воинский учёт в 17 лет</h2>
+				<div class="section-rule"></div>
+
+				<p class="law-quote-title">Обязанности граждан по воинскому учету</p>
+
+				<div class="law-quote">
+					<p>«Граждане обязаны состоять на воинском учёте.»</p>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span>ФЗ-53, Статья 10, Пункт 1</span>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img4.teletype.in/files/39/42/3942d1a1-4e20-4230-9877-8af99fca7911.png"
+								alt="Скриншот статьи 10 ФЗ-53" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_18260/40ce7bd4fa6a13314586ee258eb86d644cc63ff2"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					Первоначальная постановка на воинский учёт происходит когда юноше исполняется 17
+					лет, с 1 января по 31 марта:
+				</p>
+
+				<div class="steps">
+					<div class="step">
+						<div class="step-left">
+							<div class="step-circle">1</div>
+							<div class="step-line"></div>
+						</div>
+						<div class="step-content">
+							<div class="step-title">Повестка или список через школу</div>
+							<div class="step-desc">
+								Школа централизованно собирает парней 16–17 лет, выдаёт направления,
+								иногда организует общий поход в военкомат. Часто этим занимается
+								классный руководитель или администрация школы Иногда происходит
+								иначе и повестка приходит домой, либо вызывают через колледж/вуз.
+							</div>
+						</div>
+					</div>
+
+					<div class="step">
+						<div class="step-left">
+							<div class="step-circle">2</div>
+							<div class="step-line"></div>
+						</div>
+						<div class="step-content">
+							<div class="step-title">Медицинская комиссия</div>
+							<div class="step-desc">
+								Проходят стандартный набор врачей (терапевт, невролога, психиатра,
+								окулиста, ЛОРа, и тд.) и других специалистов. Дополнительно могут
+								отправить: на анализы, дополнительные обследования.
+							</div>
+						</div>
+					</div>
+
+					<p>
+						<strong>Итог:</strong> ты — получаешь первичную
+						<strong>категорию годности</strong>.
+					</p>
+
+					<div class="step">
+						<div class="step-left">
+							<div class="step-circle">3</div>
+							<div class="step-line"></div>
+						</div>
+						<div class="step-content">
+							<div class="step-title">Психологическое тестирование</div>
+							<div class="step-desc">
+								Анкеты и тесты на стрессоустойчивость. Влияет на предварительное
+								распределение по военным специальностям.
+							</div>
+						</div>
+					</div>
+
+					<div class="step">
+						<div class="step-left">
+							<div class="step-circle">4</div>
+							<div class="step-line"></div>
+						</div>
+						<div class="step-content">
+							<div class="step-title">Решение призывной комиссии</div>
+							<div class="step-desc">
+								Комиссия
+								<ul style="list-style: disc; margin: 8px 0; margin-left: 20px">
+									<li>проверяет документы, тесты, мед. данные</li>
+									<li>принимает решение о постановке на учёт.</li>
+									<li>выдаёт приписное удостоверение</li>
+								</ul>
+								После этого тебя вносят в реестр воинского учёта.
+							</div>
+						</div>
+					</div>
+
+					<div class="step">
+						<div class="step-left"><div class="step-circle">5</div></div>
+						<div class="step-content">
+							<div class="step-title">Выдача приписного удостоверения</div>
+							<div class="step-desc">
+								Документ, подтверждающий, что ты состоишь на учёте. После этого ты
+								внесён в реестр военнообязанных.
+							</div>
+						</div>
+					</div>
+
+					<img
+						class="step-image"
+						src="https://img4.teletype.in/files/bf/46/bf466081-c912-4bc1-b81c-43296e2d14aa.png"
+						alt="Приписное удостоверение" />
+				</div>
+
+				<div class="callout info">
+					<div class="callout-icon">ℹ️</div>
+					<div class="callout-body">
+						<strong>Итог:</strong> С 17 лет ты поставлен на воинский учёт. Теперь к тебе
+						применяется весь набор обязанностей из ФЗ-53.
+					</div>
+				</div>
+			</section>
+
+			<!-- SECTION 4 -->
+			<section
+				class="section"
+				id="s4">
+				<div class="section-num">Раздел 4</div>
+				<h2>Шаг 2: Призыв — что происходит в 18 лет</h2>
+				<div class="section-rule"></div>
+
+				<p>
+					Исполнилось 18 лет, ты состоишь на учёте. Что происходит дальше — напрямую
+					написано в законе.
+				</p>
+
+				<p class="law-quote-title">Граждане, подлежащие призыву на военную службу</p>
+
+				<div class="law-quote">
+					<p>
+						«Призыву на военную службу подлежат граждане мужского пола в возрасте от 18
+						до 30 лет, состоящие на воинском учёте.»
+					</p>
+					<cite></cite>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span class="law-dropdown-text">ФЗ-53, Статья 22, Пункт 1</span>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img3.teletype.in/files/e5/63/e56359c5-8fe4-442b-95b6-46feefa5bec3.png"
+								alt="Скриншот статьи 22 ФЗ-53" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_18260/d9310158b46b4612b367bfdee4a2cb6f4e0566a4"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					Из этого следует простая цепочка: состоишь на учёте — подлежишь призыву. Дальше
+					закон устанавливает конкретные обязанности:
+				</p>
+
+				<p class="law-quote-title">
+					Обязанности Граждан, подлежащих призыву на военную службу
+				</p>
+
+				<div class="law-quote">
+					<p>
+						«Граждане, подлежащие призыву на военную службу, обязаны получать повестки
+						военного комиссариата... и являться в указанные в повестке место и время.»
+					</p>
+					<cite></cite>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span class="law-dropdown-text">ФЗ-53, Статья 31, Пункты 1–2</span>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img2.teletype.in/files/99/22/99220fdb-6ece-49eb-b884-8a4ae257c229.png"
+								alt="Скриншот статьи 31 ФЗ-53" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_18260/0b6fba2b4841a88fc0274d43870ea1d54a32b91d"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					Являясь по повестке, ты попадаешь в следующий цикл мероприятий, каждое из
+					которых заканчивается новой повесткой на следующий этап:
+				</p>
+
+				<div class="chain">
+					<div class="chain-item">
+						<div class="chain-item-num">1.</div>
+						<div class="chain-item-desc">Уточнение учётных данных</div>
+					</div>
+					<div class="chain-arrow">↓</div>
+					<div class="chain-item">
+						<div class="chain-item-num">2.</div>
+						<div class="chain-item-desc">Медицинское освидетельствование</div>
+					</div>
+					<div class="chain-arrow">↓</div>
+					<div class="chain-item">
+						<div class="chain-item-num">3.</div>
+						<div class="chain-item-desc">Заседание призывной комиссии</div>
+					</div>
+					<div class="chain-arrow">↓</div>
+					<div class="chain-item">
+						<div class="chain-item-num">4.</div>
+						<div class="chain-item-desc">Отправка к месту службы</div>
+					</div>
+				</div>
+
+				<p>Подлежишь призыву → <strong>обязан получать повестки</strong> (ст. 31, п.2)</p>
+
+				<p>
+					Обязан получать повестки →
+					<strong>обязан являться по повесткам</strong> (ст. 31, п.1)
+				</p>
+			</section>
+
+			<!-- SECTION 5 -->
+			<section
+				class="section"
+				id="s5">
+				<div class="section-num">Раздел 5</div>
+				<h2>Что будет, если не являться</h2>
+				<div class="section-rule"></div>
+
+				<p>
+					Неявка по повестке — это не просто игнорирование бумажки. Это нарушение
+					конкретной правовой нормы с конкретными последствиями.
+				</p>
+
+				<table class="penalty-table">
+					<thead>
+						<tr>
+							<th>Ситуация</th>
+							<th>Статья</th>
+							<th>Последствие</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Первая неявка без уважительной причины</td>
+							<td>КоАП, Ст. 21.5</td>
+							<td>
+								<span class="amount">10 000 – 30 000 ₽</span><br /><small
+									>Административный штраф</small
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>Систематические неявки — расценивается как уклонение</td>
+							<td>УК РФ, Ст. 328</td>
+							<td>
+								<span class="amount">До 200 000 ₽ или до 2 лет лишения свободы</span
+								><br /><small>Уголовная ответственность</small>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="callout warn">
+					<div class="callout-icon">⚠️</div>
+					<div class="callout-body">
+						<strong>Важно про апелляцию:</strong> Если ты подаёшь иск самостоятельно с
+						ошибками в оформлении — суд его даже не рассматривает. При этом судебного
+						иммунитета на период обжалования нет. Любая неявка в это время → статья 328
+						УК.
+					</div>
+				</div>
+			</section>
+
+			<!-- SECTION 6 -->
+			<section
+				class="section"
+				id="s6">
+				<div class="section-num">Раздел 6</div>
+				<h2>Три способа не попасть в армию</h2>
+				<div class="section-rule"></div>
+
+				<p>Их всегда было только три. Разберём каждый честно — без лишних обещаний.</p>
+
+				<div class="ways">
+					<div class="way-card">
+						<div class="way-n">1</div>
+						<div>
+							<div class="way-title">Отсрочка от службы</div>
+							<div class="way-desc">
+								Учёба, уход за родственником, воспитание детей. Действует временно —
+								заканчивается отсрочка, и ты снова призывник.
+							</div>
+							<span class="badge badge-no">Временно</span>
+						</div>
+					</div>
+					<div class="way-card">
+						<div class="way-n">2</div>
+						<div>
+							<div class="way-title">Освобождение по здоровью — категория «В»</div>
+							<div class="way-desc">
+								Признают ограниченно годным. Сложный путь, требует истории болезни
+								за 9–12 месяцев. И, как мы разберём ниже, не защищает от запаса и
+								мобилизации.
+							</div>
+							<span class="badge badge-part">Частично</span>
+						</div>
+					</div>
+					<div class="way-card best">
+						<div class="way-n">3</div>
+						<div>
+							<div class="way-title">Снятие с воинского учёта</div>
+							<div class="way-desc">
+								Постоянное проживание за пределами РФ — юридически выводит из всей
+								системы воинских обязательств. Работает навсегда.
+							</div>
+							<span class="badge badge-yes">Навсегда</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SECTION 7 -->
+			<section
+				class="section"
+				id="s7">
+				<div class="section-num">Раздел 7</div>
+				<h2>Способ 2: Категория «В» — почему не спасает</h2>
+				<div class="section-rule"></div>
+
+				<p>
+					Даже если ты получишь категорию «В» (ограниченно годен) — прочитай, что это на
+					самом деле даёт по закону.
+				</p>
+
+				<p class="law-quote-title">Освобождение от призыва на военную службу</p>
+
+				<div class="law-quote">
+					<p>
+						«От призыва на военную службу освобождаются граждане, признанные ограниченно
+						годными к военной службе по состоянию здоровья.»
+					</p>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span class="law-dropdown-text">ФЗ-53, Статья 23, Пункт 1</span>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img1.teletype.in/files/49/ae/49ae5924-cfb6-4fbc-b97e-829e4f9698f3.png"
+								alt="Скриншот статьи 23 ФЗ-53" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_18260/8cc76a7265c7bb85f8e070f370852f0a1750ced8"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>Окей, от срочной службы освобождают. Но что происходит дальше?</p>
+
+				<p class="law-quote-title">Зачисление в запас</p>
+
+				<div class="law-quote">
+					<p>
+						«Запас Вооружённых Сил Российской Федерации создаётся из граждан...
+						признанных ограниченно годными к военной службе и освобождённых от призыва.»
+					</p>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span class="law-dropdown-text">ФЗ-53, Статья 52, Пункт 1</span>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img3.teletype.in/files/ac/ea/acea8be0-b010-466c-8442-d6ba36bf73b7.png"
+								alt="Скриншот статьи 52 ФЗ-53" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_18260/33d825ed999ca88bf087e3edd3cce0e184a054ed"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					То есть: <mark>освобождён от призыва → автоматически зачислен в запас</mark>. А
+					запас создан для использования в период мобилизации. Это прямо написано в ФЗ-53,
+					статья 51.2.
+				</p>
+
+				<p>Запас = ресурс для приведения в боевую готовность во время мобилизации</p>
+
+				<p>
+					Ограничено годен (категория В) = <strong>освобождён от призыва</strong> (статья
+					23)
+				</p>
+
+				<p>Освобождён от призыва = зачислен в <strong>Запас</strong> (Статья 52)</p>
+
+				<p>Запас создан → для использования в период мобилизации (статья 51.2)</p>
+
+				<h3>Реальные судебные решения по Москве — три случайных кейса</h3>
+
+				<div class="chain">
+					<div class="chain-item">
+						<div
+							class="dot"
+							style="background: var(--red)"></div>
+						<div>
+							<strong>Кейс 1.</strong> Установлен непризывной диагноз, нарушено право
+							на освобождение. Призывник обжаловал. Суд: <strong>отказ.</strong>
+						</div>
+					</div>
+
+					<div class="chain-item">
+						<div
+							class="dot"
+							style="background: var(--red)"></div>
+						<div>
+							<strong>Кейс 2.</strong> Комиссия не учла астму — основание для
+							категории «В». Призывник обжаловал. Суд: <strong>отказ.</strong>
+						</div>
+					</div>
+
+					<div class="chain-item">
+						<div
+							class="dot"
+							style="background: var(--red)"></div>
+						<div>
+							<strong>Кейс 3.</strong> Есть документы о заболевании, препятствующем
+							службе, их не приняли. Призывник обжаловал. Суд: <strong>отказ.</strong>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					Это три случайных дела по Москве, найденных за 5 минут. По стране таких тысячи.
+				</p>
+
+				<h3>Затраты</h3>
+
+				<ul class="bad-verdict">
+					<p>В итоге ты:</p>
+					<li>
+						→ на стрессе от беспредела потратишь кучу нервов от мыслей что тебя заберут
+					</li>
+
+					<li>→ потратишь кучу денег на юриста</li>
+
+					<li>
+						→ времени на сбор полного пакет мед.документв, апелляции решений которые
+						тебе не должны были выносить (месяцы-год+)
+					</li>
+				</ul>
+
+				<p>
+					Чтобы получить категория которая тебя не спасает не от военных сборов ни от
+					запаса ни оо мобилизации
+				</p>
+
+				<p>А что спасает?</p>
+			</section>
+
+			<!-- SECTION 8 -->
+			<section
+				class="section"
+				id="s8">
+				<div class="section-num">Раздел 8</div>
+				<h2>Способ 3: Снятие с учёта — как это работает</h2>
+				<div class="section-rule"></div>
+
+				<p>
+					Теперь разберём единственный способ, который решает вопрос полностью. Вся логика
+					основана на трёх статьях закона — и они очень чёткие.
+				</p>
+
+				<h3>Кто вообще обязан состоять на учёте?</h3>
+
+				<p class="law-quote-title">Организация воинского учёта</p>
+
+				<div class="law-quote">
+					<p>
+						«Граждане обязаны состоять на воинском учёте, за исключением граждан...
+						постоянно проживающих за пределами Российской Федерации.»
+					</p>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span class="law-dropdown-text">ФЗ-53, Статья 8</span>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img3.teletype.in/files/e0/ba/e0ba77fb-fc67-49d0-bde8-b8051a0ed18f.png"
+								alt="Скриншот статьи 8 ФЗ-53" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_18260/810509897ba10195f02c2732864bf731ac580508"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					Это и есть ключевое исключение. Постоянно проживающий за рубежом —
+					<strong>не обязан состоять на учёте</strong>. Следовательно: не ставится на
+					учёт, или снимается с него.
+				</p>
+
+				<h3>Что это означает для военных сборов?</h3>
+
+				<p class="law-quote-title">Освобождение от военных сборов</p>
+
+				<div class="law-quote">
+					<p>
+						«От военных сборов освобождаются граждане... пребывающие за пределами
+						Российской Федерации.»
+					</p>
+					<cite>ФЗ-53, Статья 55, Пункт 2</cite>
+				</div>
+
+				<p>
+					Здесь уже не логическая цепочка, а прямое указание закона: живёшь за рубежом —
+					военные сборы тебя не касаются.
+				</p>
+
+				<h3>А что с мобилизацией?</h3>
+
+				<p class="law-quote-title">О воинской обязанности и военной службе</p>
+
+				<div class="law-quote">
+					<p>
+						«Гражданам, состоящим на воинском учёте, с момента объявления мобилизации
+						запрещается выезд с места жительства без разрешения военного комиссариата.»
+					</p>
+					<cite>ФЗ-31, Статья 21</cite>
+				</div>
+
+				<p>
+					Ключевые слова: <mark>«гражданам, состоящим на воинском учёте»</mark>. Если ты с
+					учёта снят — этот механизм к тебе не применяется. Ты не входишь в эту категорию
+					граждан.
+				</p>
+			</section>
+
+			<!-- SECTION 9 -->
+			<section
+				class="section"
+				id="s9">
+				<div class="section-num">Раздел 9</div>
+				<h2>Правовая цепочка шаг за шагом</h2>
+				<div class="section-rule"></div>
+
+				<p>
+					Собираем всё вместе в одну таблицу — каждый шаг подкреплён конкретной статьёй
+					закона.
+				</p>
+
+				<table class="law-table">
+					<tbody>
+						<tr>
+							<td>ФЗ-53, Ст.&nbsp;1</td>
+							<td>
+								Воинская обязанность <strong>включает воинский учёт</strong> как
+								один из своих элементов
+							</td>
+						</tr>
+						<tr>
+							<td>ФЗ-53, Ст.&nbsp;8</td>
+							<td>
+								Постоянно проживающие за пределами РФ
+								<strong>не обязаны состоять на воинском учёте</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>ФЗ-53, Ст.&nbsp;55</td>
+							<td>
+								Пребывающие за пределами РФ
+								<strong>освобождены от военных сборов</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>ФЗ-31, Ст.&nbsp;21</td>
+							<td>
+								Мобилизационные обязанности адресованы только
+								<strong>гражданам, состоящим на воинском учёте</strong>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>
+					Задача на уровне документов
+					<strong>подтвердить твоё проживание за пределами РФ</strong>, а не уезжать туда
+					и вуаля, повестки не приходят и ты можешь оставаться в РФ
+				</p>
+
+				<p>
+					но ДО этого момента: на вас распространяются всё так же "обязанности граждан по
+					воинскому учёту", соответственно, снимаемся с учёта мы опираясь на эту
+					обязанность
+				</p>
+
+				<div class="verdict">
+					<h3>Итог</h3>
+					<p>Постоянно проживающий за пределами РФ, снятый с учёта:</p>
+					<ul>
+						<li>Не подлежит призыву на срочную службу</li>
+						<li>Не подлежит военным сборам</li>
+						<li>Не входит в контур мобилизационного учёта</li>
+						<li>
+							Потому что не состоит на воинском учёте — а всё остальное к нему
+							привязано
+						</li>
+					</ul>
+				</div>
+
+				<div class="callout info">
+					<div class="callout-icon">💡</div>
+					<div class="callout-body">
+						<strong>Важный нюанс:</strong> Ключевой является именно статус постоянного
+						проживания, зафиксированный документально. Военкомат — это гос. структура.
+						Общение с любой гос. структурой ведётся посредством
+						документов/заявлений/обращений и т.д.
+					</div>
+				</div>
+			</section>
+
+			<!-- SECTION 10 -->
+			<section
+				class="section"
+				id="s10">
+				<div class="section-num">Раздел 10</div>
+				<h2>Какие нужны документы и как всё оформить</h2>
+				<div class="section-rule"></div>
+
+				<h3>Основание для снятия с учёта</h3>
+
+				<p class="law-quote-title">Обязанности граждан по воинскому учету</p>
+
+				<div class="law-quote">
+					<p>
+						«Граждане, подлежащие воинскому учёту, обязаны сообщить в письменной форме в
+						военный комиссариат о выезде на срок более шести месяцев.»
+					</p>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span class="law-dropdown-text"
+								>Постановление Правительства РФ № 719, Пункт 50</span
+							>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img2.teletype.in/files/db/8c/db8c62a8-1d6b-4cd6-a09a-f130bd32cf1c.png"
+								alt="Скриншот статьи 8 ФЗ-53" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_64215/d850b385829467332781e7210c18911254cf0151"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p class="law-quote-title">
+					Об утверждении Инструкции об организации работы по обеспечению функционирования
+					системы воинского учета
+				</p>
+
+				<div class="law-quote">
+					<p>
+						«При снятии граждан с воинского учёта предоставляются: заявление о снятии с
+						воинского учёта; документы, подтверждающие выезд за пределы РФ;
+						действительные документы, подтверждающие право на постоянное проживание за
+						рубежом.»
+					</p>
+
+					<div class="law-dropdown">
+						<button
+							class="law-dropdown-btn"
+							onclick="toggleLawDropdown(this)">
+							<span class="arrow">▼</span>
+
+							<span class="law-dropdown-text">Приказ МО РФ № 700, Пункт 22</span>
+						</button>
+						<div class="law-dropdown-content">
+							<!-- Замените src на путь к вашему скриншоту -->
+							<img
+								src="https://img4.teletype.in/files/38/1e/381e7ec0-933c-447f-9c25-3d1d040a5db8.png"
+								alt="Скриншот статьи 22 Приказа МО РФ № 700" />
+							<img
+								src="https://img1.teletype.in/files/85/81/8581579d-81a0-4695-8640-d2eca3dfe6ad.png"
+								alt="Скриншот статьи 22 Приказа МО РФ № 700" />
+							<img
+								src="https://img1.teletype.in/files/87/a8/87a8ff3c-8383-46de-8733-8927fd34a149.png"
+								alt="Скриншот статьи 22 Приказа МО РФ № 700" />
+							<!-- Замените href на актуальную ссылку -->
+							<a
+								href="https://www.consultant.ru/document/cons_doc_LAW_405064"
+								target="_blank"
+								rel="noopener">
+								<span>🔗</span>
+								<span>Ссылка на оригинал на КонсультантПлюс</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<h3>Документы, подтверждающие постоянное проживание за рубежом</h3>
+
+				<div class="docs-grid">
+					<div class="doc-item">
+						<div class="doc-icon">📄</div>
+						Договор аренды жилья
+					</div>
+					<div class="doc-item">
+						<div class="doc-icon">🎓</div>
+						Справка из зарубежного университета о зачислении на очную форму
+					</div>
+					<div class="doc-item">
+						<div class="doc-icon">🌐</div>
+						Консульский учёт
+					</div>
+					<div class="doc-item">
+						<div class="doc-icon">✈️</div>
+						Билет на самолёт
+					</div>
+				</div>
+
+				<h3>Как выглядит процедура</h3>
+
+				<div class="steps">
+					<div class="step">
+						<div class="step-left">
+							<div class="step-circle">1</div>
+							<div class="step-line"></div>
+						</div>
+						<div class="step-content">
+							<div class="step-title">
+								Получить официальный документ о зачислении в зарубежный вуз
+							</div>
+							<div class="step-desc">
+								Ты получаешь от нас официальный документ о поступлении в Китайский
+								ВУЗ, с официальной печатью Китайского университета.
+							</div>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-left">
+							<div class="step-circle">2</div>
+							<div class="step-line"></div>
+						</div>
+						<div class="step-content">
+							<div class="step-title">Нотариальный перевод на русский язык</div>
+							<div class="step-desc">
+								Идёшь в нотариальное бюро чтобы перевести лист с
+								Китайского/Английского языка на Русский — это придаёт ему
+								юридическую силу в РФ. Получаешь документ о зачислении переведённый
+								на Русский язык и заверенный нотариусом с его официальной печатью
+							</div>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-left">
+							<div class="step-circle">3</div>
+							<div class="step-line"></div>
+						</div>
+						<div class="step-content">
+							<div class="step-title">Прийти в военкомат с заявлением</div>
+							<div class="step-desc">
+								Лично или через представителя с доверенностью. Говоришь, что нужно
+								сняться с учёта в связи с переездом на ПМЖ заграницу из-за учёбы.
+							</div>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-left">
+							<div class="step-circle">4</div>
+							<div class="step-line"></div>
+						</div>
+						<div class="step-content">
+							<div class="step-title">Заполнить бланк заявления</div>
+							<div class="step-desc">
+								Далее ты (или человек с доверенностью) приходишь в военкомат и
+								говоришь, что нужно сняться с учёта, в связи с переездом на ПМЖ
+								заграницу из-за учёбы в Китае.
+							</div>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-left">
+							<div class="step-circle">5</div>
+							<div class="step-line"></div>
+						</div>
+						<div class="step-content">
+							<div class="step-title">Получить справку о снятии с учёта</div>
+							<div class="step-desc">
+								После заявления, тебе дают справку о том что "вы сняты с учёта в
+								военкомате", после чего вы больше не числитесь в списках призывников
+								и повестки вам приходить больше не будут. Обычно занимает некоторое
+								время — кто-то в отпуске, кого-то нет на месте.
+							</div>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-left"><div class="step-circle">6</div></div>
+						<div class="step-content">
+							<div class="step-title">Проверить статус на Госуслугах</div>
+							<div class="step-desc">
+								Чтобы убедиться, что всё прошло корректно и ты больше не числишься в
+								списках призывников.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h2 class="faq-title">Частые вопросы</h2>
+
+				<div class="faq">
+					<div class="faq-item">
+						<div class="faq-q">С какого возраста можно сняться?</div>
+						<div class="faq-a">
+							С 17 лет — достаточно того факта, что ты состоишь на воинском учёте.
+							Ждать 18-ти не нужно.
+						</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-q">Я студент университета — можно ли сняться?</div>
+						<div class="faq-a">
+							Это работает ДАЖЕ ЕСЛИ ТЫ УЧИШЬСЯ в университете, но только если
+							собираешься отчисляться или уже оканчиваешь учёбу (4-5 курс). Дело в
+							том, что военкомат запрашивает университеты (и колледжи) о статусе
+							студента, чтобы в случае отчисления (или окончания учёбы) — аннулировать
+							отсрочку и он стал снова призывным. Нюанс: В данном случае нужно
+							максимально быстро всё это делать — потому что документы из вуза в
+							военкомат передаются за 3 дня.
+						</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-q">На сколько снимают с учёта?</div>
+						<div class="faq-a">
+							Вас СНИМАЮТ С УЧËТА НАВСЕГДА, а не на время. До момента пока не встанете
+							обратно, а обратно вы становится и не будете.
+						</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-q">Будут ли проблемы с загранпаспортом?</div>
+						<div class="faq-a">
+							Никаких проблем при получении загранника не будет. Более того как раз
+							таки нужен документ о твоем состоянии в военкомате, приносишь справку
+							что снят с учёта из-за учёбы — и это ещё и явялется веской причиной тебе
+							его получить, ибо едешь учится заграницу!
+						</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-q">Можно ли вести ИП или ООО в России?</div>
+						<div class="faq-a">
+							Абсолютно никаких проблем с открытием ИП/ООО нету, налоги платите и
+							никаких проблем и претензий к вам не будет. Куча людей которые ведут
+							бизнес на территории РФ сами находясь при этом заграницей, поэтому на
+							этот факт как фактор "отслеживания что вы в стране" никто смотреть не
+							будет, если вы вдруг переживаете
+						</div>
+					</div>
+					<div class="faq-item">
+						<div class="faq-q">Работает ли это для стран СНГ?</div>
+						<div class="faq-a">
+							Страны СНГ тоже решаем, где есть такая же статья о том, что нужно
+							сняться с учёта при выезде со страны. (Беларусь, Армения, Казахстан,
+							Кыргызстан)
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<div class="cta">
+				<h2>Нужна помощь с оформлением?</h2>
+				<p>
+					Документы, полное сопровождение процедуры снятия с учёта, разбор вашей
+					конкретной ситуации — бесплатная консультация.
+				</p>
+				<a
+					class="cta-btn"
+					href="https://t.me/gromov_glebb"
+					>Написать: @gromov_glebb</a
+				>
+			</div>
+		</div>
+
+		<script>
+			document.querySelectorAll('.law-dropdown-btn').forEach((btn) => {
+				btn.addEventListener('click', function (e) {
+					e.preventDefault();
+					this.classList.toggle('active');
+					this.closest('.law-dropdown')
+						.querySelector('.law-dropdown-content')
+						.classList.toggle('open');
+				});
+			});
+		</script>
+	</body>
+</html>
