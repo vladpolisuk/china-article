@@ -21,10 +21,10 @@
 			}
 
 			:root {
-				--bg: #f9f7f4;
+				--bg: #fdfbf8;
 				--white: #ffffff;
-				--text: #1a1a1a;
-				--text-sec: #555555;
+				--text: #111111;
+				--text-sec: #3d3d3d;
 				--text-light: #888888;
 				--border: #e0dbd4;
 				--border-light: #ede9e3;
@@ -229,13 +229,14 @@
 				line-height: 1.6;
 			}
 			.law-quote-title {
-				font-family: var(--sans);
-				font-size: 14px;
-				font-weight: 600;
-				letter-spacing: 0.1em;
-				text-transform: uppercase;
-				color: var(--accent);
-				margin-bottom: 8px;
+				font-family: var(--sans) !important;
+				font-size: 14px !important;
+				font-weight: 600 !important;
+				letter-spacing: 0.1em !important;
+				text-transform: uppercase !important;
+				color: var(--accent) !important;
+				margin-bottom: 12px !important;
+				font-style: normal !important;
 			}
 
 			/* ─── FACT TAG ─── */
@@ -361,8 +362,19 @@
 			.step-image {
 				border-radius: 4px;
 				max-width: 100%;
-				padding: 0 150px;
-				height: auto;
+				max-height: 300px;
+				flex-shrink: 0;
+			}
+			.step-image-2 {
+				border-radius: 4px;
+				max-width: 100%;
+				max-height: 400px;
+				flex-shrink: 0;
+			}
+			.step-image-3 {
+				border-radius: 4px;
+				max-width: 100%;
+				max-height: 500px;
 				flex-shrink: 0;
 			}
 			.step:last-child {
@@ -398,7 +410,12 @@
 				display: none;
 			}
 			.step-content {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
 				padding-top: 1px;
+				gap: 6px;
 				flex: 1;
 			}
 			.step-title {
@@ -799,10 +816,6 @@
 				.faq-title {
 					margin-top: 50px;
 				}
-
-				.step-image {
-					padding: 0 10px;
-				}
 			}
 
 			/* ─── LAW DROPDOWN ─── */
@@ -1010,8 +1023,6 @@
 						соответствии с федеральным законом.»
 					</p>
 
-					<cite></cite>
-
 					<div class="law-dropdown">
 						<button
 							class="law-dropdown-btn"
@@ -1056,9 +1067,9 @@
 					государством.
 				</p>
 
-				<p class="law-quote-title">Воинская обязанность</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">Воинская обязанность</p>
+
 					<div>
 						<p>Воинская обязанность граждан Российской Федерации предусматривает:</p>
 						<ul>
@@ -1108,9 +1119,9 @@
 				<h2>Воинская обязанность №1. Воинский учёт</h2>
 				<div class="section-rule"></div>
 
-				<p class="law-quote-title">Обязанности граждан по воинскому учету</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">Обязанности граждан по воинскому учету</p>
+
 					<p>«Граждане обязаны состоять на воинском учёте.»</p>
 
 					<div class="law-dropdown">
@@ -1177,6 +1188,12 @@
 						</div>
 						<div class="step-content">
 							<div class="step-title">Медицинская комиссия</div>
+
+							<img
+								src="./images/comission.jpg"
+								class="step-image"
+								alt="Медицинская комиссия" />
+
 							<div class="step-desc">
 								Проходят стандартный набор врачей (терапевт, невролога, психиатра,
 								окулиста, ЛОРа, и тд.) и других специалистов. Дополнительно могут
@@ -1197,6 +1214,12 @@
 						</div>
 						<div class="step-content">
 							<div class="step-title">Психологическое тестирование</div>
+
+							<img
+								src="./images/test.jpg"
+								class="step-image"
+								alt="Психологическое тестирование" />
+
 							<div class="step-desc">
 								Анкеты и тесты на стрессоустойчивость. Влияет на предварительное
 								распределение по военным специальностям.
@@ -1211,6 +1234,12 @@
 						</div>
 						<div class="step-content">
 							<div class="step-title">Решение призывной комиссии</div>
+
+							<img
+								src="./images/answer.jpg"
+								class="step-image"
+								alt="Решение призывной комиссии" />
+
 							<div class="step-desc">
 								Комиссия
 								<ul style="list-style: disc; margin: 8px 0; margin-left: 20px">
@@ -1229,7 +1258,7 @@
 							<div class="step-title">Приписное удостоверение</div>
 
 							<img
-								class="step-image"
+								class="step-image-2"
 								src="https://img4.teletype.in/files/bf/46/bf466081-c912-4bc1-b81c-43296e2d14aa.png"
 								alt="Приписное удостоверение" />
 
@@ -1265,14 +1294,13 @@
 
 				<p>Что дальше?</p>
 
-				<p class="law-quote-title">Граждане, подлежащие призыву на военную службу</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">Граждане, подлежащие призыву на военную службу</p>
+
 					<p>
 						«Призыву на военную службу подлежат граждане мужского пола в возрасте от 18
 						до 30 лет, состоящие на воинском учёте.»
 					</p>
-					<cite></cite>
 
 					<div class="law-dropdown">
 						<button
@@ -1304,16 +1332,15 @@
 					<span class="underline">подлежишь призыву</span> (ст. 22, п.1)
 				</p>
 
-				<p class="law-quote-title">
-					Обязанности Граждан, подлежащих призыву на военную службу
-				</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">
+						Обязанности Граждан, подлежащих призыву на военную службу
+					</p>
+
 					<p>
 						«Граждане, подлежащие призыву на военную службу, обязаны получать повестки
 						военного комиссариата... и являться в указанные в повестке место и время.»
 					</p>
-					<cite></cite>
 
 					<div class="law-dropdown">
 						<button
@@ -1534,9 +1561,9 @@
 				<h2>Способ 2: Категория «В» — ВСЕ?</h2>
 				<div class="section-rule"></div>
 
-				<p class="law-quote-title">Освобождение от призыва на военную службу</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">Освобождение от призыва на военную службу</p>
+
 					<p>
 						«От призыва на военную службу освобождаются граждане, признанные ограниченно
 						годными к военной службе по состоянию здоровья.»
@@ -1675,7 +1702,9 @@
 						получил
 					</li>
 
-					<li class="arrow-item" style="color: rgb(195, 11, 11)"">
+					<li
+						class="arrow-item"
+						style="color: rgb(195, 11, 11)">
 						О тебе принято решение направить к месту службы + иммунитета нет = любая
 						неявка = ст. 328 УК РФ (уклонение)
 					</li>
@@ -1831,9 +1860,9 @@
 
 				<p>Что она тебе даёт? </p>
 
-				<p class="law-quote-title">Освобождение от призыва на военную службу</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">Освобождение от призыва на военную службу</p>
+
 					<p>
 						«От призыва на военную службу освобождаются граждане, признанные ограниченно
 						годными к военной службе по состоянию здоровья.»
@@ -1864,11 +1893,11 @@
 					</div>
 				</div>
 
-				<p>Категория В = не идёшь на срочку на 1 год</p>
-
-				<p class="law-quote-title">Зачисление в запас</p>
+				<p>Категория В = <strong>не идёшь на срочку на 1 год</strong></p>
 
 				<div class="law-quote">
+					<p class="law-quote-title">Зачисление в запас</p>
+
 					<p>
 						«Запас Вооружённых Сил Российской Федерации создаётся из граждан...
 						признанных ограниченно годными к военной службе и освобождённых от призыва.»
@@ -1899,11 +1928,11 @@
 					</div>
 				</div>
 
-				<p>Освобождён = Попадаешь в запас</p>
-
-				<p class="law-quote-title">Запас</p>
+				<p>Освобождён = <strong>Попадаешь в запас</strong></p>
 
 				<div class="law-quote">
+					<p class="law-quote-title">Запас</p>
+
 					<p>
 						«Для мобилизационного развёртывания (перевести армию с мирного времени
 						на военнее) — создан запас вооружённых сил РФ, предназначен для
@@ -1984,9 +2013,9 @@
 
 				<h3>Шаг 1. Что такое воинская обязанность?</h3>
 
-				<p class="law-quote-title">Воинская обязанность</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">Воинская обязанность</p>
+
 					<div>
 						<p>Воинская обязанность граждан Российской Федерации предусматривает:</p>
 						<ul>
@@ -2037,9 +2066,9 @@
 
 				<h3>Шаг 2. Кто обязан состоять на воинском учете</h3>
 
-				<p class="law-quote-title">Организация воинского учёта</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">Организация воинского учёта</p>
+
 					<p>
 						«Граждане обязаны состоять на воинском учёте, за исключением граждан...
 						постоянно проживающих за пределами Российской Федерации.»
@@ -2169,9 +2198,9 @@
 
 				<h3>Шаг 5. Что это означает для военных сборов?</h3>
 
-				<p class="law-quote-title">Освобождение от военных сборов</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">Освобождение от военных сборов</p>
+
 					<p>
 						«От военных сборов освобождаются граждане... пребывающие за пределами
 						Российской Федерации.»
@@ -2189,9 +2218,9 @@
 
 				<h3>Шаг 6. А что с мобилизацией?</h3>
 
-				<p class="law-quote-title">О воинской обязанности и военной службе</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">О воинской обязанности и военной службе</p>
+
 					<p>
 						«Гражданам, состоящим на воинском учёте, с момента объявления мобилизации
 						запрещается выезд с места жительства без разрешения военного комиссариата.»
@@ -2310,9 +2339,9 @@
 
 				<h3>Основание для снятия с учёта</h3>
 
-				<p class="law-quote-title">IX. Обязанности граждан по воинскому учету</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">IX. Обязанности граждан по воинскому учету</p>
+
 					<p>
 						«Граждане, подлежащие воинскому учёту, обязаны сообщить в письменной форме в
 						военный комиссариат о выезде на срок более шести месяцев.Направить
@@ -2348,12 +2377,12 @@
 
 				<p>❓А какое заявление надо направить❓</p>
 
-				<p class="law-quote-title">
-					II. Перечень, формы документов воинского учета, порядок их хранения, заполнения,
-					выдачи и замены
-				</p>
-
 				<div class="law-quote">
+					<p class="law-quote-title">
+						II. Перечень, формы документов воинского учета, порядок их хранения,
+						заполнения, выдачи и замены
+					</p>
+
 					<div>
 						<p>При снятии граждан с воинского учёта предоставляются:</p>
 						<ul>
@@ -2463,6 +2492,11 @@
 								Получить официальный документ о зачислении в зарубежный вуз
 							</div>
 
+							<img
+								class="step-image-3"
+								src="https://img1.teletype.in/files/c0/77/c0770164-1f3c-42a2-8e8b-ce9580bcadab.png"
+								alt="Пример официального документа о зачислении в зарубежный вуз" />
+
 							<div class="step-desc">
 								Ты получаешь от нас официальный документ о поступлении в Китайский
 								ВУЗ, с официальной печатью Китайского университета.
@@ -2479,6 +2513,11 @@
 
 						<div class="step-content">
 							<div class="step-title">Нотариальный перевод на русский язык</div>
+
+							<img
+								class="step-image-3"
+								src="https://img3.teletype.in/files/a9/e8/a9e8e27d-7d00-41c7-8d0f-0d05098bc4be.png"
+								alt="Пример нотариального перевода документа о зачислении на русский язык" />
 
 							<div class="step-desc">
 								Идёшь в нотариальное бюро чтобы перевести лист с
@@ -2499,6 +2538,11 @@
 						<div class="step-content">
 							<div class="step-title">Заполнить бланк заявления</div>
 
+							<img
+								class="step-image-3"
+								src="https://img1.teletype.in/files/81/88/818810f6-97e1-41c8-9140-e3a29b37f9d4.png"
+								alt="Пример заполненного бланка заявления о снятии с учёта" />
+
 							<div class="step-desc">
 								Далее ты (или человек с доверенностью) приходишь в военкомат и
 								говоришь, что нужно сняться с учёта, в связи с переездом на ПМЖ
@@ -2517,6 +2561,11 @@
 						<div class="step-content">
 							<div class="step-title">Получить справку о снятии с учёта</div>
 
+							<img
+								class="step-image-3"
+								src="https://img4.teletype.in/files/b3/c6/b3c69581-da1b-417b-91ab-c76baac51a87.png"
+								alt="Пример справки о снятии с учёта в военкомате" />
+
 							<div class="step-desc">
 								После заявления, тебе дают справку о том что "вы сняты с учёта в
 								военкомате", после чего вы больше не числитесь в списках призывников
@@ -2533,6 +2582,11 @@
 							<div class="step-title">
 								Проверить статус на реестре воинского учёта
 							</div>
+
+							<img
+								class="step-image-2"
+								src="https://img2.teletype.in/files/d9/d3/d9d3e72c-a7e4-442e-9099-72db567f00fc.png"
+								alt="Пример реестра воинского учёта с отметкой о снятии с учёта" />
 
 							<div class="step-desc">
 								Чтобы убедиться, что всё прошло корректно и ты больше не числишься в
