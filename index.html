@@ -723,29 +723,77 @@
 				font-size: 16px;
 			}
 
-			/* ─── FAQ ─── */
+			/* ─── FAQ ACCORDION ─── */
 			.faq {
 				margin: 16px 0;
 				display: flex;
 				flex-direction: column;
+				border-top: 1px solid var(--border-light);
 			}
 			.faq-item {
 				border-bottom: 1px solid var(--border-light);
-				padding: 14px 0;
-			}
-			.faq-item:first-child {
-				border-top: 1px solid var(--border-light);
 			}
 			.faq-q {
 				font-size: 16px;
 				font-weight: 600;
 				color: var(--text);
-				margin-bottom: 5px;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 12px;
+				padding: 16px 0;
+				user-select: none;
+				-webkit-tap-highlight-color: transparent;
+				transition: color 0.15s;
+			}
+			.faq-q:hover {
+				color: var(--accent);
+			}
+			.faq-item.open .faq-q {
+				color: var(--accent);
+			}
+			.faq-icon {
+				flex-shrink: 0;
+				width: 21px;
+				height: 21px;
+				border-radius: 50%;
+				background: var(--accent-light);
+				border: 1px solid var(--accent-mid);
+				color: var(--accent);
+				font-size: 13px;
+				font-weight: 700;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition:
+					transform 0.25s ease,
+					background 0.15s;
+				line-height: 1;
+			}
+			.faq-item.open .faq-icon {
+				transform: rotate(45deg);
+				background: var(--accent);
+				color: #fff;
+				border-color: var(--accent);
 			}
 			.faq-a {
 				font-size: 14px;
 				color: var(--text-sec);
 				line-height: 1.55;
+				overflow: hidden;
+				max-height: 0;
+				opacity: 0;
+				transition:
+					max-height 0.3s ease,
+					opacity 0.25s ease,
+					padding 0.25s ease;
+				padding-bottom: 0;
+			}
+			.faq-item.open .faq-a {
+				max-height: 600px;
+				opacity: 1;
+				padding-bottom: 16px;
 			}
 
 			/* ─── CTA ─── */
@@ -2600,14 +2648,20 @@
 
 				<div class="faq">
 					<div class="faq-item">
-						<div class="faq-q">С какого возраста можно сняться?</div>
+						<div class="faq-q">
+							<span>С какого возраста можно сняться?</span>
+							<span class="faq-icon">+</span>
+						</div>
 						<div class="faq-a">
 							С 17 лет — достаточно того факта, что ты состоишь на воинском учёте.
 							Ждать 18-ти не нужно.
 						</div>
 					</div>
 					<div class="faq-item">
-						<div class="faq-q">Я студент университета — можно ли сняться?</div>
+						<div class="faq-q">
+							<span>Я студент университета — можно ли сняться?</span>
+							<span class="faq-icon">+</span>
+						</div>
 						<div class="faq-a">
 							Это работает ДАЖЕ ЕСЛИ ТЫ УЧИШЬСЯ в университете, но только если
 							собираешься отчисляться или уже оканчиваешь учёбу (4-5 курс). Дело в
@@ -2619,14 +2673,20 @@
 						</div>
 					</div>
 					<div class="faq-item">
-						<div class="faq-q">На сколько снимают с учёта?</div>
+						<div class="faq-q">
+							<span>На сколько снимают с учёта?</span>
+							<span class="faq-icon">+</span>
+						</div>
 						<div class="faq-a">
 							Вас СНИМАЮТ С УЧËТА НАВСЕГДА, а не на время. До момента пока не встанете
 							обратно, а обратно вы становится и не будете.
 						</div>
 					</div>
 					<div class="faq-item">
-						<div class="faq-q">Будут ли проблемы с загранпаспортом?</div>
+						<div class="faq-q">
+							<span>Будут ли проблемы с загранпаспортом?</span>
+							<span class="faq-icon">+</span>
+						</div>
 						<div class="faq-a">
 							Никаких проблем при получении загранника не будет. Более того как раз
 							таки нужен документ о твоем состоянии в военкомате, приносишь справку
@@ -2635,7 +2695,10 @@
 						</div>
 					</div>
 					<div class="faq-item">
-						<div class="faq-q">Можно ли вести ИП или ООО в России?</div>
+						<div class="faq-q">
+							<span>Можно ли вести ИП или ООО в России?</span>
+							<span class="faq-icon">+</span>
+						</div>
 						<div class="faq-a">
 							Абсолютно никаких проблем с открытием ИП/ООО нету, налоги платите и
 							никаких проблем и претензий к вам не будет. Куча людей которые ведут
@@ -2645,7 +2708,10 @@
 						</div>
 					</div>
 					<div class="faq-item">
-						<div class="faq-q">Работает ли это для стран СНГ?</div>
+						<div class="faq-q">
+							<span>Работает ли это для стран СНГ?</span>
+							<span class="faq-icon">+</span>
+						</div>
 						<div class="faq-a">
 							Страны СНГ тоже решаем, где есть такая же статья о том, что нужно
 							сняться с учёта при выезде со страны. (Беларусь, Армения, Казахстан,
@@ -2678,6 +2744,24 @@
 					this.closest('.law-dropdown')
 						.querySelector('.law-dropdown-content')
 						.classList.toggle('open');
+				});
+			});
+
+			// FAQ Accordion
+			document.querySelectorAll('.faq-q').forEach((q) => {
+				q.addEventListener('click', function () {
+					const item = this.closest('.faq-item');
+					const isOpen = item.classList.contains('open');
+
+					// Close all open items
+					document.querySelectorAll('.faq-item.open').forEach((openItem) => {
+						openItem.classList.remove('open');
+					});
+
+					// Open clicked item if it was closed
+					if (!isOpen) {
+						item.classList.add('open');
+					}
 				});
 			});
 		</script>
