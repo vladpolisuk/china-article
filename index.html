@@ -39,7 +39,9 @@
 				--orange: #c96a1a;
 				--orange-light: #fdf4ec;
 				--green: #1e7a4a;
+				--green-2: #4d7963;
 				--green-light: #edf7f1;
+				--green-light-2: rgb(251, 255, 253);
 				--yellow: #7a6200;
 				--yellow-light: #fffbeb;
 				--yellow-mid: #fde68a;
@@ -180,6 +182,27 @@
 				margin: 26px 0 14px;
 				text-wrap: balance;
 				line-height: 1.5;
+			}
+
+			h4 {
+				font-family: var(--sans);
+				font-size: 17px;
+				font-weight: 600;
+				color: var(--text);
+				margin: 26px 0 14px;
+				text-wrap: balance;
+				line-height: 1.5;
+			}
+
+			.center-title {
+				font-family: var(--serif);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				font-style: italic;
+				text-wrap: balance;
+				font-weight: normal;
 			}
 
 			p {
@@ -344,6 +367,11 @@
 				border-color: var(--border);
 				color: var(--text-sec);
 			}
+			.callout.success-light {
+				background: var(--white);
+				border-color: #a7d9be;
+				color: var(--text-sec);
+			}
 
 			/* ─── STEP FLOW ─── */
 			.steps {
@@ -351,6 +379,14 @@
 				display: flex;
 				flex-direction: column;
 				gap: 0;
+			}
+			.steps-list {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+			.steps-list .callout {
+				margin: 0;
 			}
 			.step {
 				display: flex;
@@ -1020,7 +1056,7 @@
 			<header>
 				<div class="header-eyebrow">Правовой разбор</div>
 
-				<h1>Воинская обязанность:<br />откуда берётся и как от неё освободиться</h1>
+				<h1>Как списать долг который не брал</h1>
 
 				<p class="header-lead">
 					Простое объяснение того, как устроена система: что написано в законах, что за
@@ -1033,28 +1069,69 @@
 				</div>
 			</header>
 
-			<!-- ═══════════════════ TABLE OF CONTENTS ═══════════════════ -->
-			<nav class="toc">
-				<div class="toc-label">Содержание</div>
-				<ol>
-					<li><a href="#s1">Откуда берётся воинская обязанность</a></li>
-					<li><a href="#s2">Что входит в воинскую обязанность</a></li>
-					<li><a href="#s3">Обязанность №1 — Воинский учёт</a></li>
-					<li><a href="#s4">Обязанность №2 — Призыв на военную службу</a></li>
-					<li><a href="#s5">Что будет, если не являться</a></li>
-					<li><a href="#s6">Обязанность №3 — Прохождение военной службы</a></li>
-					<li><a href="#s6b">Как не отправиться в армию — 3 способа</a></li>
-					<li><a href="#s7">Способ 2: Категория «В»</a></li>
-					<li><a href="#s8">Способ 3: Снятие с воинского учёта</a></li>
-					<li><a href="#s9">Правовая цепочка шаг за шагом</a></li>
-					<li><a href="#s10">Документы и оформление</a></li>
-				</ol>
-			</nav>
-
 			<!-- ═══════════════════════════════════════════════════ -->
 			<section
 				class="section"
 				id="s1">
+				<br />
+				<br />
+
+				<h4 class="center-title">
+					2026 — время, когда обычные способы <strong>уже не работают</strong>
+				</h4>
+
+				<br />
+				<br />
+
+				<p>
+					«Долг» в виде службы в армии — это
+					<strong>цепочка обязательств</strong> прописанная в законе.
+				</p>
+
+				<p><strong>За 7 минут</strong> твоего чтения этой статьи:</p>
+
+				<div class="steps-list">
+					<div class="callout success-light">
+						<div class="callout-body">
+							1. Разложу этот механизм по статьям закона и покажу ту самую деталь,
+							вытащив которую, ты останавливаешь цепочку целиком.
+						</div>
+					</div>
+
+					<div class="callout success-light">
+						<div class="callout-body">
+							2. Покажу почему "Категория В" в 2026 — это скам
+						</div>
+					</div>
+
+					<div class="callout success-light">
+						<div class="callout-body">
+							3. Дам ЗАКОННЫЙ способ избавляет тебя от всех обязательств перед
+							военкоматом 1 раз и навсегда о котором 99% людей не знают из-за того что
+							не разбираются
+						</div>
+					</div>
+
+					<div class="callout success-light">
+						<div class="callout-body">
+							4. Как избежать мобилизацию которая будет осенью 2026
+						</div>
+					</div>
+				</div>
+
+				<br />
+				<br />
+
+				<h4 class="center-title">
+					<strong>Итог чтения:</strong>
+					Ты перестал ебать себе голову, узнал что сделать, чтоб выдохнуть и стать для
+					военкомата по обязательствам на уровне женщины
+				</h4>
+
+				<br />
+				<br />
+				<br />
+
 				<h2>Откуда вообще берётся воинская обязанность</h2>
 
 				<div class="section-rule"></div>
