@@ -104,6 +104,16 @@
 				color: var(--text-light);
 				border-top: 1px solid var(--border);
 				padding-top: 14px;
+				margin-bottom: 40px;
+			}
+			.header-image {
+				width: 100%;
+				object-fit: cover;
+				border-radius: 4px;
+				margin: 10px 0;
+			}
+			.header-image-mobile {
+				display: none;
 			}
 			.faq-title {
 				margin-top: 80px;
@@ -905,6 +915,19 @@
 					flex-direction: column;
 					gap: 6px;
 				}
+				.header-image {
+					display: none;
+				}
+				.header-image-mobile {
+					display: block;
+					width: 100%;
+					object-fit: cover;
+					border-radius: 4px;
+					margin: 10px 0;
+				}
+				.header-meta {
+					margin-bottom: 0;
+				}
 			}
 
 			/* ─── LAW DROPDOWN ─── */
@@ -1063,6 +1086,11 @@
 
 				<h1>Как списать долг который не брал</h1>
 
+				<img
+					class="header-image header-image-mobile"
+					src="./images/mobilization.jpg"
+					alt="Мобилизация" />
+
 				<p class="header-lead">
 					Простое объяснение того, как устроена система: что написано в законах, что за
 					чем следует, и какие есть реальные способы выйти из неё.
@@ -1072,6 +1100,11 @@
 					<span>Автор: Глеб Громов</span>
 					<span>Источники: Конституция РФ · ФЗ-53 · ФЗ-31 · КоАП · УК РФ</span>
 				</div>
+
+				<img
+					class="header-image header-image-desktop"
+					src="./images/mobilization.jpg"
+					alt="Мобилизация" />
 			</header>
 
 			<!-- ═══════════════════════════════════════════════════ -->
@@ -1117,9 +1150,8 @@
 
 					<div class="callout success-light">
 						<div class="callout-body">
-							4. Дам ЗАКОННЫЙ способ, снимающий с тебя все обязательства перед
-							военкоматом 1 раз и навсегда о котором 99% людей не знают из-за того,
-							что не разбираются
+							4. Как за 1 месяц снять с себя все обязательства перед военкоматом 1 раз
+							и навсегда о котором 99% людей не знают из-за того, что не разбираются
 						</div>
 					</div>
 				</div>
@@ -1129,9 +1161,24 @@
 
 				<h4 class="center-title">
 					<strong>Итог чтения:</strong>
-					Ты перестал ебать себе голову, узнал что сделать, чтоб выдохнуть и стать для
-					военкомата по обязательствам на уровне женщины
 				</h4>
+
+				<p>Ты знаешь как законно:</p>
+
+				<ul
+					style="
+						list-style: disc;
+						margin-top: 4px;
+						margin-bottom: 12px;
+						margin-left: 20px;
+						opacity: 0.8;
+					">
+					<li>не подлежать призыву</li>
+					<li>не получать повестки</li>
+					<li>освободится от военной службы</li>
+				</ul>
+
+				<p>И быть для военкомата наравне с женщиной</p>
 
 				<br />
 				<br />
