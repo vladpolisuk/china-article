@@ -3834,6 +3834,8 @@
 		</div>
 
 		<script>
+			import { inject } from '@vercel/analytics';
+
 			// Toggle Learn More
 			function toggleLearnMore() {
 				const section = document.getElementById('learnMore');
@@ -3895,6 +3897,8 @@
 					}
 				});
 			});
+
+			inject();
 		</script>
 	</body>
 </html>
